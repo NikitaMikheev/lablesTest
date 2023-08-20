@@ -1,0 +1,29 @@
+{
+  "name": "labelstest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tsc --build",
+    "start": "npx ts-node src/index.ts",
+    "typeorm": "typeorm-ts-node-commonjs migration:generate ./src/model/migrations/${name} -d ./src/data-source.ts",
+    "create": "typeorm-ts-node-commonjs migration:create ./src/model/migrations/${name}",
+    "add": "typeorm-ts-node-commonjs migration:run -d ./src/data-source.ts",
+    "drop": "typeorm-ts-node-commonjs migration:revert -d ./src/data-source.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.5.0",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "import": "^0.0.6",
+    "pg": "^8.11.3",
+    "reflect-metadata": "^0.1.13",
+    "ts-node": "^10.9.1",
+    "typeorm": "^0.3.17"
+  }
+}
