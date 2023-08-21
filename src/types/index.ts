@@ -9,6 +9,6 @@ export interface IEntitiesTypeAndID {
     },
     User: {
         id: number,
-        type?: string
+        type: string
     }
 }
